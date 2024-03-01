@@ -22,7 +22,7 @@ for PKGDEP in "${PKGSDEP[@]}"; do
   echo
   echo "INSTALLING: ${PKGDEP}"
   echo
-  sudo pacman -S "$PKGDEP" --needed
+  sudo pacman -S "$PKGDEP" --needed --noconfirm
 done
 
 # Install Node Version Manager
@@ -91,7 +91,6 @@ PKGS=(
   'networkmanager'
   'obsidian'
   'okular'
-  'opera'
   'perl'
   'polkit'
   'python-pip'
@@ -116,7 +115,7 @@ for PKG in "${PKGS[@]}"; do
   echo
   echo "INSTALLING: ${PKG}"
   echo
-  sudo pacman -S "$PKG" --needed
+  sudo pacman -S "$PKG" --needed --noconfirm
 done
 
 source ~/.bashrc
